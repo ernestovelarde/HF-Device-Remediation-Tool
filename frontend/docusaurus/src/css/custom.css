@@ -1,0 +1,20 @@
+:root {
+  --ifm-color-primary: #1a3a5f;
+  --ifm-color-primary-dark: #163251;
+  --ifm-color-primary-darker: #142f4b;
+  --ifm-color-primary-darkest: #10273d;
+  --ifm-color-primary-light: #1f4270;
+  --ifm-color-primary-lighter: #214776;
+  --ifm-color-primary-lightest: #295689;
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: "Source Sans 3", "Source Sans Pro", "Segoe UI", sans-serif;
+}
+
+.hero--primary {
+  --ifm-hero-background-color: #0f1f33;
+  --ifm-hero-text-color: #f3f6fb;
+}
+
+.main-wrapper {
+  background: linear-gradient(180deg, #f4f7fb 0%, #ffffff 60%);
+}

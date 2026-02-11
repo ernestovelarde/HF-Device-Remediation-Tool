@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: NinjaRMM Remediation API
+  version: 0.1.0
+paths:
+  /health:
+    get:
+      responses:
+        "200":
+          description: OK
+  /groups:
+    get:
+      responses:
+        "200":
+          description: Group list
+  /groups/{id}/issues:
+    get:
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Devices with issues
+  /remediate:
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupId:
+                  type: string
+                scriptId:
+                  type: string
+                deviceIds:
+                  type: array
+                  items:
+                    type: string
+              required:
+                - groupId
+                - scriptId
+      responses:
+        "200":
+          description: Remediation job created
+  /jobs/{jobId}:
+    get:
+      parameters:
+        - name: jobId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Remediation job status
